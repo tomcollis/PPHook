@@ -1,0 +1,14 @@
+{
+  "name": "PPHook",
+  "description": "A package that receives webhooks, stores them for later retrieval and when retrieved then auto deletes the webhooks.",
+  "homepage" : "https://tcollis.co.uk/",
+  "keywords" : ["PPHook", "webhook", "util", "server", "relay"],
+  "author": "Tom Collis <tom.collis@gmail.com> (https://tcollis.co.uk/)",
+  "repository": {"type": "git", "url": "https://github.com/tomcollis/PPHook.git"},
+  "main": "index.js",
+  "version": "1.0.1",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
