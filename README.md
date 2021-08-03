@@ -1,3 +1,5 @@
+# THIS PROJECT IS A WORK IN PROGRESS, TURN ON RELEASE NOTIFICATIONS TO GET NOTIFIED - SOON...
+
 # Webhook Relay aka P(ush)P(ull)Hooks
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 
