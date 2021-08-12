@@ -1,0 +1,12 @@
+{
+    "name": "PPHook",
+    "description": "Webhook system that uses Push and Pull to post and get the body of webhooks.", 
+    "env": [
+        {
+            "key": "API_KEY",
+            "description": "API Key for retrieving data",
+            "value": "very-long-password",
+            "required": true 
+        }
+    ]
+}

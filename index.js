@@ -64,11 +64,11 @@ app.use('/', function(req, res, next){
   next();
 });
 
-// map of valid api keys
-// api keys do _not_ serve as authentication, merely to
+// valid api key
+// api keys do _not_serve as authentication, merely to
 // track API usage or help prevent malicious behavior etc.
 
-var apiKeys = ['foo', 'bar'];
+var apiKeys = process.env.API_KEY;
 
 // we now can assume the api key is valid,
 // and simply expose the data
