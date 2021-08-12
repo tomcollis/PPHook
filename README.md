@@ -1,22 +1,14 @@
-# THIS PROJECT IS A WORK IN PROGRESS, TURN ON RELEASE NOTIFICATIONS TO GET NOTIFIED - SOON...
-
-# Webhook Relay aka P(ush)P(ull)Hooks
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+#### ⚠️ **IMPORTANT** ⚠️: THIS PROJECT IS A WORK IN PROGRESS, TURN ON RELEASE NOTIFICATIONS TO GET NOTIFIED WHEN IT IS READY.
+# PPHook = **P**(ush)**P**(ull)(Web)**Hook**
+[![](https://img.shields.io/badge/Buy%20me%20-coffee!-orange.svg?logo=buy-me-a-coffee&color=795548)](https://paypal.me/TomCollisUK/2)
+[![GitHub stars](https://img.shields.io/github/stars/tomcollis/PPHook)](https://github.com/tomcollis/PPHook/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/tomcollis/PPHook)](https://github.com/tomcollis/PPHook/issues)
+[![Github All Releases download count](https://img.shields.io/github/downloads/tomcollis/PPHook/total.svg?style=flat)](https://github.com/tomcollis/PPHook/releases/latest)
+[![GitHub latest release version](https://img.shields.io/github/v/release/tomcollis/PPHook.svg?style=flat)](https://github.com/tomcollis/PPHook/releases/latest)
 
 [![Deploy](https://button.deta.dev/1/svg)](https://go.deta.dev/deploy)
 
 A brief description of what this project does and who it's for
-
-
-## Usage/Examples
-
-```javascript
-import Component from 'my-project'
-
-function App() {
-  return <Component />
-}
-```
 
 
 ## Environment Variables
@@ -25,16 +17,15 @@ To run this code, you will need to add the following environment variables to yo
 
 `DETA_PROJECT_KEY`
 
-`API_KEYS` (Work in Progress - currently specified in index.js)
+`API_KEY`
 
-## Deployment to [Deta](https://www.deta.sh/)
+## Deploy to [Deta](https://www.deta.sh/)
 
-To deploy this project on Deta, run
+To deploy this project on Deta, click the button below:
 
-```bash
-  npm run deploy
-```
+[![Deploy](https://button.deta.dev/1/svg)](https://go.deta.dev/deploy)
 
+You will automatically be prompted to enter the required environment variables and all data will be private in your own account.
 
 ## API Reference
 
@@ -75,15 +66,16 @@ This will retrieve all webhooks posted without a source key, it will also delete
 
 ## Feedback
 
-If you have any feedback, please reach out to us at fake@fake.com
+If you have any feedback, you can:
 
-## Contributing
+[![](https://img.shields.io/static/v1?label=Message%20on&message=Telegram&color=27A7E7&logo=telegram&style=for-the-badge)](https://t.me/tomcollis)
 
-Contributions are always welcome!
+or
 
-See `contributing.md` for ways to get started.
+[![](https://img.shields.io/static/v1?label=Create%20New&message=Issue&color=4EC820&logo=github&style=for-the-badge)](https://github.com/tomcollis/PPHook/issues)
 
-Please adhere to this project's `code of conduct`.
+
+
 
 ## Acknowledgements
  - [ExpressJS Example - Simple Web API](https://github.com/expressjs/express/blob/28db2c2c5cf992c897d1fbbc6b119ee02fe32ab1/examples/web-service/index.js)
