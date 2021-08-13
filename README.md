@@ -1,7 +1,7 @@
 ![PPHook](https://github.com/tomcollis/PPHook/blob/main/PPHook.png?raw=true)
 
 # PPHook = **P**(ush)**P**(ull)(Web)**Hook**
-[![](https://img.shields.io/badge/Buy%20me%20-coffee!-orange.svg?logo=buy-me-a-coffee&color=795548)](https://paypal.me/TomCollisUK/2)
+[![Buy me coffee](https://img.shields.io/badge/Buy%20me%20-coffee!-orange.svg?logo=buy-me-a-coffee&color=795548)](https://paypal.me/TomCollisUK/2)
 [![GitHub stars](https://img.shields.io/github/stars/tomcollis/PPHook)](https://github.com/tomcollis/PPHook/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/tomcollis/PPHook)](https://github.com/tomcollis/PPHook/issues)
 [![Github All Releases download count](https://img.shields.io/github/downloads/tomcollis/PPHook/total.svg?style=flat)](https://github.com/tomcollis/PPHook/releases/latest)
@@ -9,11 +9,11 @@
 
 [![Deploy](https://button.deta.dev/1/svg)](https://go.deta.dev/deploy)
 
-This app/service was created because I wanted to use webhooks with self-hosted apps/services and didn't want the requirements like having a static IP or opening firewall ports and having the system be available 24/7 to catch all webhooks. There are many services (free and chargeable) that provide a webhook relay service, but the ones I looked at just relayed the information to another webhook, which didn't solve my problem.
+This app/service was created because I wanted to use webhooks with self-hosted apps and did not want the requirements of installing agents, opening firewall ports or needing a static IP and having the system be available 24/7 to ensure no webhooks are missed. There are many services (free and chargeable) that provide a webhook relay service, but the ones I looked at just relayed the information to another webhook, which did not solve my problem.
 
-This service allows webhooks to be **Pushed** (submitted) and saved, and then **Pulled** (retrieved) at any time in the future. The webhooks can be tagged with a source system or identify (source-id), and then downloaded by source system, this allows different processes or tools to download the webhooks from particular systems.
+This service allows webhooks to be **Pushed** (submitted) and saved, and then **Pulled** (retrieved) at any time in the future. The webhooks can be tagged with a source system identifier (source-id), and then downloaded by source system, this allows different processes or tools to download the webhooks from specific systems.
 
-This service can also be used with some cloud hosted automation services that don't allow webhooks but do allow scheduled get requests (e.g. Microsoft Power Automate).
+This service can also be used with some cloud hosted automation services that do not allow webhooks but do allow scheduled get requests (e.g., Microsoft Power Automate).
 
 ___
 ## Environment Variables
@@ -47,7 +47,7 @@ ___
 | :-------- | :------- | :------------------------- |
 | `source` | `string` | **Optional but Recommended**. Source System Key, can be anything you want or left blank .|
 
-All data is stored in your [Deta](https://www.deta.sh/) account in a [Deta](https://www.deta.sh/) Base called 'Webhooks'. This means your data is not available for myself or anyone else to see, but don't forget it is only protected by your API key. Your API Key is not required to post data.
+All data is stored in your [Deta](https://www.deta.sh/) account in a [Deta](https://www.deta.sh/) Base called 'Webhooks'. This means your data is not available for me or anyone else to see, but do not forget it is only protected by your API key. Your API Key is not required to post data.
 
 ###### Example
 
