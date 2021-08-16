@@ -31,6 +31,7 @@ app.post('/', function(req, res){
     // post is empty
     if (req.body.length <= 0) {
     res.status(404);
+    res.set('Cache-control', `no-store`)
     res.send({ error: "no data" });
     console.log('received: empty request');
     } else {
@@ -43,6 +44,7 @@ app.post('/', function(req, res){
     console.log('receiving data from: ' + source + ' at ' + timeKey);
     db.put({ key: timeKey.toString(), body: req.body, source });
     res.status(200);
+    res.set('Cache-control', `no-store`)
     res.send({ success: "data received", key: timeKey, body: req.body, source });
     console.log('data received and processed');
     }
@@ -83,6 +85,7 @@ app.get('/webhooks/:source', async (req, res) => {
     const { value: items} = await db.fetch([{'source':source}]).next();
     console.log('Retrieved ' + items.length + ' items');
     // Create response
+    res.set('Cache-control', `no-store`)
     res.setHeader("Content-Count", items.length);
     res.json({ items: items });
     // Delete retrieved records
@@ -103,6 +106,7 @@ app.get('/webhooks/', async (req, res) => {
     const { value: items} = await db.fetch([{'source':source}]).next();
     console.log('Retrieved ' + items.length + ' items');
     // Create response
+    res.set('Cache-control', `no-store`)
     res.setHeader("Content-Count", items.length);
     res.json({ items: items });
     // Delete retrieved records
@@ -122,6 +126,7 @@ app.use(function(err, req, res, next){
   // whatever you want here, feel free to populate
   // properties on `err` to treat it differently in here.
   res.status(err.status || 500);
+  res.set('Cache-control', `no-store`)
   res.send({ error: err.message });
 });
 
@@ -130,5 +135,6 @@ app.use(function(err, req, res, next){
 // invoke next() and do not respond.
 app.use(function(req, res){
   res.status(404);
+  res.set('Cache-control', `no-store`)
   res.send({ error: "can't find that" });
 });
