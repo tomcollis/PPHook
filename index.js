@@ -5,6 +5,7 @@ const express = require('express');
 const { Deta } = require("deta");
 var app = module.exports = express();
 app.use(express.json());
+var path = require('path');
 
 /**
  * Deta variables.
@@ -29,7 +30,8 @@ function error(status, msg) {
 app.get('/', function(req, res){
     res.status(200);
     res.set('Cache-control', `no-store`)
-    res.send({ error: "home" });
+    res.sendFile(path.join(__dirname, 'index.html'));
+    //res.send({ error: "home" });
 });
 
 // the following, accepts any http posts that contains data
