@@ -9,9 +9,9 @@ app.use(express.json());
 /**
  * Deta variables.
  */
-const deta = Deta(process.env.DETA_PROJECT_KEY)
+const deta = Deta()
 // Deta database name
-const db = deta.Base("Webhooks")
+const db = deta.Base("PPHook")
 
 // create an error with .status. we
 // can then use the property in our
