@@ -23,11 +23,20 @@ function error(status, msg) {
   return err;
 }
 
-// the following, accepts any http posts that contain data
-// and then saves it to a database using the source parameter
-// for the source field and saving the body as a JSON object
+// the following, accepts http get requests and provides
+// a simple help guide
 
-app.post('/', function(req, res){
+app.get('/', function(req, res){
+    res.status(200);
+    res.set('Cache-control', `no-store`)
+    res.send({ error: "home" });
+});
+
+// the following, accepts any http posts that contains data
+// and then saves it to a database using the source parameter
+// for the system-id field and saving the body as a JSON object
+
+app.post('/p/', function(req, res){
     // post is empty
     if (req.body.length <= 0) {
     res.status(404);
