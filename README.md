@@ -20,7 +20,7 @@ ___
 
 To run this code, you will need to provide following environment variables, you will be prompted automatically when using Deploy to [Deta](https://www.deta.sh/).
 
-`DETA_PROJECT_KEY` - automatically populate when deployed to [Deta](https://www.deta.sh/)
+`DETA_PROJECT_KEY` - automatically populate when deployed to [Deta Micro](https://www.deta.sh/) or [Deta Space](https://deta.space/)
 
 `API_KEY` - can be generated at [keycdn Tools](https://tools.keycdn.com/sha256-online-generator)
 
@@ -40,19 +40,19 @@ ___
 #### Post Webhook
 
 ```http
-  POST /
+  POST /p
 ```
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `source` | `string` | **Optional but Recommended**. Source System Key, can be anything you want or left blank .|
 
-All data is stored in your [Deta](https://www.deta.sh/) account in a [Deta](https://www.deta.sh/) Base called 'Webhooks'. This means your data is not available for me or anyone else to see, but do not forget it is only protected by your API key. Your API Key is not required to post data.
+All data is stored in your [Deta](https://www.deta.sh/) account in a [Deta](https://www.deta.sh/) Base called 'PPHook'. This means your data is not available for me or anyone else to see, but do not forget it is only protected by your API key. Your API Key is not required to post data.
 
 ###### Example
 
 ```http
-  POST /?source=system-name
+  POST /p?source=system-name
   BODY {
         "value1": "a-to-z",
         "value2": "1-to-9",
