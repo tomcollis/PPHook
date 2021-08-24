@@ -25,13 +25,24 @@ function error(status, msg) {
 }
 
 // the following, accepts http get requests and provides
-// a simple help guide
+// a simple help guide or introduction
 
 app.get('/', function(req, res){
     res.status(200);
     res.set('Cache-control', `no-store`)
     res.sendFile(path.join(__dirname, 'index.html'));
     //res.send({ error: "home" });
+});
+
+// the following, accepts any http posts that contains data
+// and then saves it to a database using the source parameter
+// for the system-id field and saving the body as a JSON object
+
+app.post('/', function(req, res){
+    res.status(404);
+    res.set('Cache-control', `no-store`)
+    res.send({ error: "data shouldn't be posted here" });
+    console.log('received: data posted to wrong endpoint');
 });
 
 // the following, accepts any http posts that contains data
