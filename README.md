@@ -1,3 +1,5 @@
+## This code has been discontinued and no longer works. See newer solution HookStack - https://github.com/tomcollis/HookStack
+
 ![PPHook](https://github.com/tomcollis/PPHook/blob/main/img/PPHook-Banner.png?raw=true)
 
 # PPHook = **P**(ush)**P**(ull)(Web)**Hook**
